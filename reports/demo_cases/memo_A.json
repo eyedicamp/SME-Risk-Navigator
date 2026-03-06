@@ -1,0 +1,56 @@
+{
+  "one_line_summary": "The credit risk is low with a risk grade of A and a probability of default of 0.57%, supported by strong financial ratios and profitability metrics.",
+  "risk_grade": "A",
+  "risk_score_pd": 0.005652710705237642,
+  "top_risk_drivers": [
+    {
+      "feature": "Total debt/Total net worth",
+      "value": 0.0042066770625302,
+      "direction": "risk_down",
+      "reasoning": "A very low total debt relative to net worth reduces financial leverage risk, lowering the overall credit risk."
+    },
+    {
+      "feature": "Persistent EPS in the Last Four Seasons",
+      "value": 0.237780088872081,
+      "direction": "risk_down",
+      "reasoning": "Consistent earnings per share over recent seasons indicate stable profitability, decreasing credit risk."
+    },
+    {
+      "feature": "Net worth/Assets",
+      "value": 0.906914169967047,
+      "direction": "risk_down",
+      "reasoning": "High net worth relative to assets suggests strong capitalization, which reduces risk."
+    },
+    {
+      "feature": "Borrowing dependency",
+      "value": 0.371314722322253,
+      "direction": "risk_down",
+      "reasoning": "Moderate borrowing dependency indicates manageable reliance on external financing, lowering risk."
+    },
+    {
+      "feature": "Continuous interest rate (after tax)",
+      "value": 0.781722676632727,
+      "direction": "risk_down",
+      "reasoning": "A favorable after-tax interest rate reduces financing costs, contributing to lower credit risk."
+    }
+  ],
+  "questions_to_ask": [
+    "What is the industry sector of the borrower?",
+    "Are there any recent changes in the borrower's financial condition or operations?",
+    "What is the borrower's repayment history and current debt maturity profile?",
+    "Are there any contingent liabilities or off-balance sheet exposures?"
+  ],
+  "documents_to_request": [
+    "Latest audited financial statements",
+    "Recent management accounts",
+    "Debt schedule and repayment plan",
+    "Credit bureau reports"
+  ],
+  "action_suggestions": [
+    "Approve credit with monitoring due to strong financial metrics",
+    "Request updated financials periodically to track any changes",
+    "Consider setting covenants related to leverage and profitability",
+    "Maintain regular communication with the borrower for early warning signs"
+  ],
+  "disclaimer": "This credit assessment is based solely on the provided data and does not consider external factors or qualitative information. Further due diligence is recommended."
+}

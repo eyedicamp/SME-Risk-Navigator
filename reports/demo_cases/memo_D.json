@@ -1,0 +1,56 @@
+{
+  "one_line_summary": "The credit risk is low with a risk grade of D and a probability of default of 0.0073, supported by strong financial ratios indicating low leverage and solid profitability.",
+  "risk_grade": "D",
+  "risk_score_pd": 0.0072836440653030144,
+  "top_risk_drivers": [
+    {
+      "feature": "Total debt/Total net worth",
+      "value": 0.004700024621782,
+      "direction": "risk_down",
+      "reasoning": "A very low total debt to net worth ratio reduces financial risk by indicating minimal leverage."
+    },
+    {
+      "feature": "Net worth/Assets",
+      "value": 0.899658372887505,
+      "direction": "risk_down",
+      "reasoning": "High net worth relative to assets suggests strong capitalization and financial stability."
+    },
+    {
+      "feature": "Equity to Liability",
+      "value": 0.0378380835052887,
+      "direction": "risk_down",
+      "reasoning": "Positive equity to liability ratio indicates a healthy balance sheet with more equity than liabilities."
+    },
+    {
+      "feature": "Debt ratio %",
+      "value": 0.100341627112495,
+      "direction": "risk_down",
+      "reasoning": "Low debt ratio percentage reflects limited reliance on debt financing, lowering risk."
+    },
+    {
+      "feature": "Continuous interest rate (after tax)",
+      "value": 0.781585132425598,
+      "direction": "risk_down",
+      "reasoning": "A favorable continuous interest rate after tax reduces interest burden and credit risk."
+    }
+  ],
+  "questions_to_ask": [
+    "Can you provide the latest financial statements to verify current ratios and profitability?",
+    "Are there any upcoming changes in debt structure or capital expenditures planned?",
+    "What is the company's policy on managing interest rate risk?",
+    "Can you provide details on any contingent liabilities or off-balance sheet exposures?"
+  ],
+  "documents_to_request": [
+    "Most recent audited financial statements",
+    "Debt agreements and schedules",
+    "Management discussion and analysis report",
+    "Interest rate risk management policy documents"
+  ],
+  "action_suggestions": [
+    "Monitor the company's leverage and profitability trends regularly.",
+    "Review interest rate exposure and hedging strategies to mitigate risk.",
+    "Request updated financials periodically to confirm ongoing creditworthiness.",
+    "Consider setting covenants related to debt levels and interest coverage."
+  ],
+  "disclaimer": "This analysis is based solely on the provided data and does not constitute a comprehensive credit assessment. Additional information and context may be required for a full evaluation."
+}
