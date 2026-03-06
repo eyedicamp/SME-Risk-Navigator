@@ -284,7 +284,7 @@ def main() -> None:
                 st.image(
                     str(global_shap_path),
                     caption="Global SHAP importance (from training)",
-                    use_container_width=True,
+                    use_column_width=True,
                 )
             else:
                 st.info("Global SHAP image not found. Run training without --skip_shap.")
