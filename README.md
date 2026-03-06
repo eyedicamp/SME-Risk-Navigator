@@ -82,12 +82,31 @@ pytest -q
 
 If your runtime has a CUDA-linked `xgboost` build without GPU driver, training auto-falls back to a CPU tree model (`random_forest_fallback`) and continues to generate artifacts for the demo.
 
-## 9) Output Artifacts
+## 9) Deploy (Streamlit Community Cloud)
+1. Push this repository to GitHub (done).
+2. Go to `https://share.streamlit.io` and sign in with GitHub.
+3. Click `New app` and select:
+   - Repository: `eyedicamp/SME-Risk-Navigator`
+   - Branch: `main`
+   - Main file path: `app/streamlit_app.py`
+4. In app `Settings -> Secrets`, add:
+   ```toml
+   OPENAI_API_KEY="sk-..."
+   OPENAI_MODEL="gpt-4.1-mini"
+   OPENAI_BASE_URL=""
+   ```
+5. Deploy.
+
+Notes:
+- `runtime.txt` pins Python to 3.10 for compatibility with the current dependency set.
+- GitHub Pages cannot host this app directly because it requires Python model inference at runtime.
+
+## 10) Output Artifacts
 - Models: `models/xgb_model.joblib`, `models/calibrated_model.joblib`, `models/feature_schema.json`
 - Reports: `reports/metrics.json`, calibration plots, SHAP plot, local explanation JSON
 - Demo memos: `reports/demo_cases/memo_case_good.json`, `memo_case_borderline.json`, `memo_case_bad.json`
 
-## 10) Screenshot Placeholders
+## 11) Screenshot Placeholders
 - `[Placeholder] streamlit_main_screen.png`
 - `[Placeholder] streamlit_memo_json.png`
 - `[Placeholder] calibration_plots.png`
