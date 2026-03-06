@@ -38,19 +38,20 @@ def load_models() -> dict[str, Any] | None:
         xgb = joblib.load(xgb_path)
         calibrated = joblib.load(cal_path)
         schema = json.loads(schema_path.read_text(encoding="utf-8"))
+        grade_thresholds = load_grade_thresholds(GRADE_THRESHOLDS_PATH)
         return {
             "xgb": xgb,
             "calibrated": calibrated,
             "schema": schema,
-            "grade_thresholds": load_grade_thresholds(GRADE_THRESHOLDS_PATH),
+            "grade_thresholds": grade_thresholds,
             "reference_case": _load_reference_case(
                 calibrated,
                 schema,
-                load_grade_thresholds(GRADE_THRESHOLDS_PATH),
+                grade_thresholds,
             ),
         }
-    except Exception:
-        return None
+    except Exception as exc:
+        return {"load_error": str(exc)}
 
 
 def _load_reference_case(
@@ -185,6 +186,14 @@ def main() -> None:
     if artifacts is None:
         st.sidebar.error("Model status: NOT LOADED")
         st.warning("Model artifacts are missing. Run: `python -m src.train --data data/raw/dataset.csv --label target`")
+        return
+    if isinstance(artifacts, dict) and artifacts.get("load_error"):
+        st.sidebar.error("Model status: LOAD FAILED")
+        st.error(f"Model loading failed: {artifacts['load_error']}")
+        st.info(
+            "Likely cause: model serialization version mismatch. "
+            "Align scikit-learn/xgboost versions between training and deployment."
+        )
         return
 
     st.sidebar.success("Model status: LOADED")
