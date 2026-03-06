@@ -158,7 +158,15 @@ def generate_copilot_memo(
     client_kwargs: dict[str, Any] = {"api_key": api_key}
     if base_url:
         client_kwargs["base_url"] = base_url
-    client = OpenAI(**client_kwargs)
+    try:
+        client = OpenAI(**client_kwargs)
+    except Exception as exc:
+        return get_fallback_memo(
+            pd_score,
+            grade,
+            drivers,
+            f"OpenAI client initialization failed: {exc}",
+        )
 
     schema_hint = {
         "one_line_summary": "str",
