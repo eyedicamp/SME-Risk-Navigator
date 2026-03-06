@@ -1,0 +1,766 @@
+{
+  "feature_order": [
+    " ROA(C) before interest and depreciation before interest",
+    " ROA(A) before interest and % after tax",
+    " ROA(B) before interest and depreciation after tax",
+    " Operating Gross Margin",
+    " Realized Sales Gross Margin",
+    " Operating Profit Rate",
+    " Pre-tax net Interest Rate",
+    " After-tax net Interest Rate",
+    " Non-industry income and expenditure/revenue",
+    " Continuous interest rate (after tax)",
+    " Operating Expense Rate",
+    " Research and development expense rate",
+    " Cash flow rate",
+    " Interest-bearing debt interest rate",
+    " Tax rate (A)",
+    " Net Value Per Share (B)",
+    " Net Value Per Share (A)",
+    " Net Value Per Share (C)",
+    " Persistent EPS in the Last Four Seasons",
+    " Cash Flow Per Share",
+    " Revenue Per Share (Yuan \u00a5)",
+    " Operating Profit Per Share (Yuan \u00a5)",
+    " Per Share Net profit before tax (Yuan \u00a5)",
+    " Realized Sales Gross Profit Growth Rate",
+    " Operating Profit Growth Rate",
+    " After-tax Net Profit Growth Rate",
+    " Regular Net Profit Growth Rate",
+    " Continuous Net Profit Growth Rate",
+    " Total Asset Growth Rate",
+    " Net Value Growth Rate",
+    " Total Asset Return Growth Rate Ratio",
+    " Cash Reinvestment %",
+    " Current Ratio",
+    " Quick Ratio",
+    " Interest Expense Ratio",
+    " Total debt/Total net worth",
+    " Debt ratio %",
+    " Net worth/Assets",
+    " Long-term fund suitability ratio (A)",
+    " Borrowing dependency",
+    " Contingent liabilities/Net worth",
+    " Operating profit/Paid-in capital",
+    " Net profit before tax/Paid-in capital",
+    " Inventory and accounts receivable/Net value",
+    " Total Asset Turnover",
+    " Accounts Receivable Turnover",
+    " Average Collection Days",
+    " Inventory Turnover Rate (times)",
+    " Fixed Assets Turnover Frequency",
+    " Net Worth Turnover Rate (times)",
+    " Revenue per person",
+    " Operating profit per person",
+    " Allocation rate per person",
+    " Working Capital to Total Assets",
+    " Quick Assets/Total Assets",
+    " Current Assets/Total Assets",
+    " Cash/Total Assets",
+    " Quick Assets/Current Liability",
+    " Cash/Current Liability",
+    " Current Liability to Assets",
+    " Operating Funds to Liability",
+    " Inventory/Working Capital",
+    " Inventory/Current Liability",
+    " Current Liabilities/Liability",
+    " Working Capital/Equity",
+    " Current Liabilities/Equity",
+    " Long-term Liability to Current Assets",
+    " Retained Earnings to Total Assets",
+    " Total income/Total expense",
+    " Total expense/Assets",
+    " Current Asset Turnover Rate",
+    " Quick Asset Turnover Rate",
+    " Working capitcal Turnover Rate",
+    " Cash Turnover Rate",
+    " Cash Flow to Sales",
+    " Fixed Assets to Assets",
+    " Current Liability to Liability",
+    " Current Liability to Equity",
+    " Equity to Long-term Liability",
+    " Cash Flow to Total Assets",
+    " Cash Flow to Liability",
+    " CFO to Assets",
+    " Cash Flow to Equity",
+    " Current Liability to Current Assets",
+    " Liability-Assets Flag",
+    " Net Income to Total Assets",
+    " Total assets to GNP price",
+    " No-credit Interval",
+    " Gross Profit to Sales",
+    " Net Income to Stockholder's Equity",
+    " Liability to Equity",
+    " Degree of Financial Leverage (DFL)",
+    " Interest Coverage Ratio (Interest expense to EBIT)",
+    " Net Income Flag",
+    " Equity to Liability"
+  ],
+  "features": [
+    {
+      "feature_name": " ROA(C) before interest and depreciation before interest",
+      "default_value": 0.502461853458782,
+      "min": 0.3350265685175253,
+      "max": 0.6604241212889385,
+      "description": "Numeric financial feature:  ROA(C) before interest and depreciation before interest"
+    },
+    {
+      "feature_name": " ROA(A) before interest and % after tax",
+      "default_value": 0.559474487570868,
+      "min": 0.3354819014391625,
+      "max": 0.7168229393807237,
+      "description": "Numeric financial feature:  ROA(A) before interest and % after tax"
+    },
+    {
+      "feature_name": " ROA(B) before interest and depreciation after tax",
+      "default_value": 0.552010278922855,
+      "min": 0.36756571550939526,
+      "max": 0.7035986937202201,
+      "description": "Numeric financial feature:  ROA(B) before interest and depreciation after tax"
+    },
+    {
+      "feature_name": " Operating Gross Margin",
+      "default_value": 0.605939837703051,
+      "min": 0.5804174173741337,
+      "max": 0.6512333703281975,
+      "description": "Numeric financial feature:  Operating Gross Margin"
+    },
+    {
+      "feature_name": " Realized Sales Gross Margin",
+      "default_value": 0.605903803744649,
+      "min": 0.5810458496086717,
+      "max": 0.6508433387624495,
+      "description": "Numeric financial feature:  Realized Sales Gross Margin"
+    },
+    {
+      "feature_name": " Operating Profit Rate",
+      "default_value": 0.999021892732888,
+      "min": 0.9976232813794486,
+      "max": 0.9993982439132612,
+      "description": "Numeric financial feature:  Operating Profit Rate"
+    },
+    {
+      "feature_name": " Pre-tax net Interest Rate",
+      "default_value": 0.797462088833116,
+      "min": 0.7952932257579434,
+      "max": 0.7981090297173301,
+      "description": "Numeric financial feature:  Pre-tax net Interest Rate"
+    },
+    {
+      "feature_name": " After-tax net Interest Rate",
+      "default_value": 0.809374807958912,
+      "min": 0.8074952113415431,
+      "max": 0.8099645029950595,
+      "description": "Numeric financial feature:  After-tax net Interest Rate"
+    },
+    {
+      "feature_name": " Non-industry income and expenditure/revenue",
+      "default_value": 0.303525251131211,
+      "min": 0.30224150120160603,
+      "max": 0.3047748248347564,
+      "description": "Numeric financial feature:  Non-industry income and expenditure/revenue"
+    },
+    {
+      "feature_name": " Continuous interest rate (after tax)",
+      "default_value": 0.781633974654252,
+      "min": 0.7796240495765462,
+      "max": 0.7822417404001858,
+      "description": "Numeric financial feature:  Continuous interest rate (after tax)"
+    },
+    {
+      "feature_name": " Operating Expense Rate",
+      "default_value": 0.000272208306655,
+      "min": 0.0001023382971069,
+      "max": 9795599999.999994,
+      "description": "Numeric financial feature:  Operating Expense Rate"
+    },
+    {
+      "feature_name": " Research and development expense rate",
+      "default_value": 492000000.0,
+      "min": 0.0,
+      "max": 9440000000.0,
+      "description": "Numeric financial feature:  Research and development expense rate"
+    },
+    {
+      "feature_name": " Cash flow rate",
+      "default_value": 0.465081402078458,
+      "min": 0.43727193578420304,
+      "max": 0.516223547469867,
+      "description": "Numeric financial feature:  Cash flow rate"
+    },
+    {
+      "feature_name": " Interest-bearing debt interest rate",
+      "default_value": 0.0003210321032103,
+      "min": 0.0,
+      "max": 760000000.0,
+      "description": "Numeric financial feature:  Interest-bearing debt interest rate"
+    },
+    {
+      "feature_name": " Tax rate (A)",
+      "default_value": 0.0713634983297905,
+      "min": 0.0,
+      "max": 0.649863346492558,
+      "description": "Numeric financial feature:  Tax rate (A)"
+    },
+    {
+      "feature_name": " Net Value Per Share (B)",
+      "default_value": 0.184105178879946,
+      "min": 0.140407062492099,
+      "max": 0.30270447937297196,
+      "description": "Numeric financial feature:  Net Value Per Share (B)"
+    },
+    {
+      "feature_name": " Net Value Per Share (A)",
+      "default_value": 0.184105178879946,
+      "min": 0.13993342042054727,
+      "max": 0.30270447937297196,
+      "description": "Numeric financial feature:  Net Value Per Share (A)"
+    },
+    {
+      "feature_name": " Net Value Per Share (C)",
+      "default_value": 0.184105178879946,
+      "min": 0.13993342042054727,
+      "max": 0.30270447937297196,
+      "description": "Numeric financial feature:  Net Value Per Share (C)"
+    },
+    {
+      "feature_name": " Persistent EPS in the Last Four Seasons",
+      "default_value": 0.224260187198639,
+      "min": 0.163656991585516,
+      "max": 0.3299309823201281,
+      "description": "Numeric financial feature:  Persistent EPS in the Last Four Seasons"
+    },
+    {
+      "feature_name": " Cash Flow Per Share",
+      "default_value": 0.322451722430502,
+      "min": 0.28540001414727334,
+      "max": 0.366874160005659,
+      "description": "Numeric financial feature:  Cash Flow Per Share"
+    },
+    {
+      "feature_name": " Revenue Per Share (Yuan \u00a5)",
+      "default_value": 0.0273757127516373,
+      "min": 0.0014670962082369,
+      "max": 0.21350091504454147,
+      "description": "Numeric financial feature:  Revenue Per Share (Yuan \u00a5)"
+    },
+    {
+      "feature_name": " Operating Profit Per Share (Yuan \u00a5)",
+      "default_value": 0.104144613630812,
+      "min": 0.06658415438482206,
+      "max": 0.20068072632521752,
+      "description": "Numeric financial feature:  Operating Profit Per Share (Yuan \u00a5)"
+    },
+    {
+      "feature_name": " Per Share Net profit before tax (Yuan \u00a5)",
+      "default_value": 0.179407998794909,
+      "min": 0.122392106650599,
+      "max": 0.2785207501694657,
+      "description": "Numeric financial feature:  Per Share Net profit before tax (Yuan \u00a5)"
+    },
+    {
+      "feature_name": " Realized Sales Gross Profit Growth Rate",
+      "default_value": 0.0221020729181582,
+      "min": 0.021692837992137694,
+      "max": 0.024376731433266404,
+      "description": "Numeric financial feature:  Realized Sales Gross Profit Growth Rate"
+    },
+    {
+      "feature_name": " Operating Profit Growth Rate",
+      "default_value": 0.848042874964897,
+      "min": 0.8464152095374905,
+      "max": 0.8503123863602998,
+      "description": "Numeric financial feature:  Operating Profit Growth Rate"
+    },
+    {
+      "feature_name": " After-tax Net Profit Growth Rate",
+      "default_value": 0.689436246895045,
+      "min": 0.6785232003959203,
+      "max": 0.697062713561204,
+      "description": "Numeric financial feature:  After-tax Net Profit Growth Rate"
+    },
+    {
+      "feature_name": " Regular Net Profit Growth Rate",
+      "default_value": 0.689436246895045,
+      "min": 0.6785232003959203,
+      "max": 0.6967776763663819,
+      "description": "Numeric financial feature:  Regular Net Profit Growth Rate"
+    },
+    {
+      "feature_name": " Continuous Net Profit Growth Rate",
+      "default_value": 0.217597801402655,
+      "min": 0.21660847162157829,
+      "max": 0.21840772011120838,
+      "description": "Numeric financial feature:  Continuous Net Profit Growth Rate"
+    },
+    {
+      "feature_name": " Total Asset Growth Rate",
+      "default_value": 6400000000.0,
+      "min": 0.000102262022205936,
+      "max": 9760000000.0,
+      "description": "Numeric financial feature:  Total Asset Growth Rate"
+    },
+    {
+      "feature_name": " Net Value Growth Rate",
+      "default_value": 0.0004613815714183,
+      "min": 0.000322828852715712,
+      "max": 0.0011346348307974818,
+      "description": "Numeric financial feature:  Net Value Growth Rate"
+    },
+    {
+      "feature_name": " Total Asset Return Growth Rate Ratio",
+      "default_value": 0.26404488270353,
+      "min": 0.26183490686994454,
+      "max": 0.26762545943383786,
+      "description": "Numeric financial feature:  Total Asset Return Growth Rate Ratio"
+    },
+    {
+      "feature_name": " Cash Reinvestment %",
+      "default_value": 0.380434782608696,
+      "min": 0.32117208747811204,
+      "max": 0.42032673894415234,
+      "description": "Numeric financial feature:  Cash Reinvestment %"
+    },
+    {
+      "feature_name": " Current Ratio",
+      "default_value": 0.010544740890044,
+      "min": 0.002364822574656472,
+      "max": 0.07476087750116225,
+      "description": "Numeric financial feature:  Current Ratio"
+    },
+    {
+      "feature_name": " Quick Ratio",
+      "default_value": 0.0073862707692077,
+      "min": 0.00043895908480108,
+      "max": 0.06625849202794275,
+      "description": "Numeric financial feature:  Quick Ratio"
+    },
+    {
+      "feature_name": " Interest Expense Ratio",
+      "default_value": 0.630700606841002,
+      "min": 0.6243807071136013,
+      "max": 0.6388583307077984,
+      "description": "Numeric financial feature:  Interest Expense Ratio"
+    },
+    {
+      "feature_name": " Total debt/Total net worth",
+      "default_value": 0.0055581393228098,
+      "min": 0.000498964973235176,
+      "max": 0.03923606817497871,
+      "description": "Numeric financial feature:  Total debt/Total net worth"
+    },
+    {
+      "feature_name": " Debt ratio %",
+      "default_value": 0.111618345073616,
+      "min": 0.014655500801160907,
+      "max": 0.2391716298334188,
+      "description": "Numeric financial feature:  Debt ratio %"
+    },
+    {
+      "feature_name": " Net worth/Assets",
+      "default_value": 0.888381654926384,
+      "min": 0.7608283701665811,
+      "max": 0.9853444991988392,
+      "description": "Numeric financial feature:  Net worth/Assets"
+    },
+    {
+      "feature_name": " Long-term fund suitability ratio (A)",
+      "default_value": 0.005642556097072,
+      "min": 0.004908347221634716,
+      "max": 0.04901693851363809,
+      "description": "Numeric financial feature:  Long-term fund suitability ratio (A)"
+    },
+    {
+      "feature_name": " Borrowing dependency",
+      "default_value": 0.372658991730842,
+      "min": 0.36963718146295,
+      "max": 0.40087442376471444,
+      "description": "Numeric financial feature:  Borrowing dependency"
+    },
+    {
+      "feature_name": " Contingent liabilities/Net worth",
+      "default_value": 0.0053658477137564,
+      "min": 0.0053658477137564,
+      "max": 0.010051842644047973,
+      "description": "Numeric financial feature:  Contingent liabilities/Net worth"
+    },
+    {
+      "feature_name": " Operating profit/Paid-in capital",
+      "default_value": 0.10402722816617,
+      "min": 0.06698877978080674,
+      "max": 0.2002758643151435,
+      "description": "Numeric financial feature:  Operating profit/Paid-in capital"
+    },
+    {
+      "feature_name": " Net profit before tax/Paid-in capital",
+      "default_value": 0.178252017193274,
+      "min": 0.1273713897896089,
+      "max": 0.2745919613905436,
+      "description": "Numeric financial feature:  Net profit before tax/Paid-in capital"
+    },
+    {
+      "feature_name": " Inventory and accounts receivable/Net value",
+      "default_value": 0.400127005732674,
+      "min": 0.39392623217666123,
+      "max": 0.4349754495775178,
+      "description": "Numeric financial feature:  Inventory and accounts receivable/Net value"
+    },
+    {
+      "feature_name": " Total Asset Turnover",
+      "default_value": 0.118440779610195,
+      "min": 0.010074962518740642,
+      "max": 0.5095052473763104,
+      "description": "Numeric financial feature:  Total Asset Turnover"
+    },
+    {
+      "feature_name": " Accounts Receivable Turnover",
+      "default_value": 0.0009698396112525,
+      "min": 0.0003368062248283,
+      "max": 0.026589755815486584,
+      "description": "Numeric financial feature:  Accounts Receivable Turnover"
+    },
+    {
+      "feature_name": " Average Collection Days",
+      "default_value": 0.0065708296152713,
+      "min": 0.000449907564352656,
+      "max": 0.022349325625381538,
+      "description": "Numeric financial feature:  Average Collection Days"
+    },
+    {
+      "feature_name": " Inventory Turnover Rate (times)",
+      "default_value": 0.0007155684967195,
+      "min": 0.0001024151439897,
+      "max": 9730000000.0,
+      "description": "Numeric financial feature:  Inventory Turnover Rate (times)"
+    },
+    {
+      "feature_name": " Fixed Assets Turnover Frequency",
+      "default_value": 0.000582503266179,
+      "min": 0.0001036401915149,
+      "max": 9610000000.0,
+      "description": "Numeric financial feature:  Fixed Assets Turnover Frequency"
+    },
+    {
+      "feature_name": " Net Worth Turnover Rate (times)",
+      "default_value": 0.0295161290322581,
+      "min": 0.0104838709677419,
+      "max": 0.1720129032258058,
+      "description": "Numeric financial feature:  Net Worth Turnover Rate (times)"
+    },
+    {
+      "feature_name": " Revenue per person",
+      "default_value": 0.018442195555425,
+      "min": 0.002158306772615724,
+      "max": 0.2622590661398584,
+      "description": "Numeric financial feature:  Revenue per person"
+    },
+    {
+      "feature_name": " Operating profit per person",
+      "default_value": 0.395796114968002,
+      "min": 0.3589041405666988,
+      "max": 0.49604260419257823,
+      "description": "Numeric financial feature:  Operating profit per person"
+    },
+    {
+      "feature_name": " Allocation rate per person",
+      "default_value": 0.0078541748670525,
+      "min": 0.000224453537004968,
+      "max": 0.16422145035483146,
+      "description": "Numeric financial feature:  Allocation rate per person"
+    },
+    {
+      "feature_name": " Working Capital to Total Assets",
+      "default_value": 0.810003180254328,
+      "min": 0.6857042497783271,
+      "max": 0.9595982530306273,
+      "description": "Numeric financial feature:  Working Capital to Total Assets"
+    },
+    {
+      "feature_name": " Quick Assets/Total Assets",
+      "default_value": 0.386744762182714,
+      "min": 0.0405684455540459,
+      "max": 0.8669351222975226,
+      "description": "Numeric financial feature:  Quick Assets/Total Assets"
+    },
+    {
+      "feature_name": " Current Assets/Total Assets",
+      "default_value": 0.514958187314015,
+      "min": 0.08435815062177732,
+      "max": 0.9620878002974415,
+      "description": "Numeric financial feature:  Current Assets/Total Assets"
+    },
+    {
+      "feature_name": " Cash/Total Assets",
+      "default_value": 0.0741710871949429,
+      "min": 0.00263773518065442,
+      "max": 0.6858769983370596,
+      "description": "Numeric financial feature:  Cash/Total Assets"
+    },
+    {
+      "feature_name": " Quick Assets/Current Liability",
+      "default_value": 0.007859584969584,
+      "min": 0.000562638241885392,
+      "max": 0.06682351635791953,
+      "description": "Numeric financial feature:  Quick Assets/Current Liability"
+    },
+    {
+      "feature_name": " Cash/Current Liability",
+      "default_value": 0.0048495417581753,
+      "min": 0.00016968283581003999,
+      "max": 0.22133136542884863,
+      "description": "Numeric financial feature:  Cash/Current Liability"
+    },
+    {
+      "feature_name": " Current Liability to Assets",
+      "default_value": 0.0825047750710289,
+      "min": 0.012055447266054856,
+      "max": 0.22683709771241162,
+      "description": "Numeric financial feature:  Current Liability to Assets"
+    },
+    {
+      "feature_name": " Operating Funds to Liability",
+      "default_value": 0.348553135470588,
+      "min": 0.28030119591664826,
+      "max": 0.46564938820179963,
+      "description": "Numeric financial feature:  Operating Funds to Liability"
+    },
+    {
+      "feature_name": " Inventory/Working Capital",
+      "default_value": 0.277178281419085,
+      "min": 0.27322914231593726,
+      "max": 0.2837477430025317,
+      "description": "Numeric financial feature:  Inventory/Working Capital"
+    },
+    {
+      "feature_name": " Inventory/Current Liability",
+      "default_value": 0.0065385447730217,
+      "min": 0.0,
+      "max": 1497199999.999939,
+      "description": "Numeric financial feature:  Inventory/Current Liability"
+    },
+    {
+      "feature_name": " Current Liabilities/Liability",
+      "default_value": 0.808014320672796,
+      "min": 0.20393763488083352,
+      "max": 1.0,
+      "description": "Numeric financial feature:  Current Liabilities/Liability"
+    },
+    {
+      "feature_name": " Working Capital/Equity",
+      "default_value": 0.735995976388731,
+      "min": 0.7232385176763039,
+      "max": 0.7439191808544935,
+      "description": "Numeric financial feature:  Working Capital/Equity"
+    },
+    {
+      "feature_name": " Current Liabilities/Equity",
+      "default_value": 0.329680083060929,
+      "min": 0.3265107567661006,
+      "max": 0.35416931192725204,
+      "description": "Numeric financial feature:  Current Liabilities/Equity"
+    },
+    {
+      "feature_name": " Long-term Liability to Current Assets",
+      "default_value": 0.0019621004112254,
+      "min": 0.0,
+      "max": 1267599999.9999566,
+      "description": "Numeric financial feature:  Long-term Liability to Current Assets"
+    },
+    {
+      "feature_name": " Retained Earnings to Total Assets",
+      "default_value": 0.937526847717276,
+      "min": 0.8537613458075969,
+      "max": 0.9704055709532057,
+      "description": "Numeric financial feature:  Retained Earnings to Total Assets"
+    },
+    {
+      "feature_name": " Total income/Total expense",
+      "default_value": 0.0023343223313843,
+      "min": 0.001837240653203052,
+      "max": 0.003630399093779685,
+      "description": "Numeric financial feature:  Total income/Total expense"
+    },
+    {
+      "feature_name": " Total expense/Assets",
+      "default_value": 0.0228411917533334,
+      "min": 0.0043157629489652795,
+      "max": 0.13284298980545195,
+      "description": "Numeric financial feature:  Total expense/Assets"
+    },
+    {
+      "feature_name": " Current Asset Turnover Rate",
+      "default_value": 0.0001983351534424,
+      "min": 0.00010209397647856401,
+      "max": 9780000000.0,
+      "description": "Numeric financial feature:  Current Asset Turnover Rate"
+    },
+    {
+      "feature_name": " Quick Asset Turnover Rate",
+      "default_value": 0.0002260774595132,
+      "min": 0.00010205368155792,
+      "max": 9852799999.999998,
+      "description": "Numeric financial feature:  Quick Asset Turnover Rate"
+    },
+    {
+      "feature_name": " Working capitcal Turnover Rate",
+      "default_value": 0.593962714329145,
+      "min": 0.5937880880664548,
+      "max": 0.5944918011867235,
+      "description": "Numeric financial feature:  Working capitcal Turnover Rate"
+    },
+    {
+      "feature_name": " Cash Turnover Rate",
+      "default_value": 1120000000.0,
+      "min": 0.000102909471346512,
+      "max": 9622799999.999998,
+      "description": "Numeric financial feature:  Cash Turnover Rate"
+    },
+    {
+      "feature_name": " Cash Flow to Sales",
+      "default_value": 0.67157391497022,
+      "min": 0.671392510503836,
+      "max": 0.6717727205473653,
+      "description": "Numeric financial feature:  Cash Flow to Sales"
+    },
+    {
+      "feature_name": " Fixed Assets to Assets",
+      "default_value": 0.201244124344391,
+      "min": 0.0038045795165574155,
+      "max": 0.7922149885506072,
+      "description": "Numeric financial feature:  Fixed Assets to Assets"
+    },
+    {
+      "feature_name": " Current Liability to Liability",
+      "default_value": 0.808014320672796,
+      "min": 0.20393763488083352,
+      "max": 1.0,
+      "description": "Numeric financial feature:  Current Liability to Liability"
+    },
+    {
+      "feature_name": " Current Liability to Equity",
+      "default_value": 0.329680083060929,
+      "min": 0.3265107567661006,
+      "max": 0.35416931192725204,
+      "description": "Numeric financial feature:  Current Liability to Equity"
+    },
+    {
+      "feature_name": " Equity to Long-term Liability",
+      "default_value": 0.112337975503749,
+      "min": 0.110933233663468,
+      "max": 0.14292395105360473,
+      "description": "Numeric financial feature:  Equity to Long-term Liability"
+    },
+    {
+      "feature_name": " Cash Flow to Total Assets",
+      "default_value": 0.645379452405385,
+      "min": 0.5251605406195642,
+      "max": 0.8102767209973307,
+      "description": "Numeric financial feature:  Cash Flow to Total Assets"
+    },
+    {
+      "feature_name": " Cash Flow to Liability",
+      "default_value": 0.459736408128681,
+      "min": 0.39194136186674255,
+      "max": 0.5607578990262251,
+      "description": "Numeric financial feature:  Cash Flow to Liability"
+    },
+    {
+      "feature_name": " CFO to Assets",
+      "default_value": 0.593338852208354,
+      "min": 0.43213366540306364,
+      "max": 0.7294306390320995,
+      "description": "Numeric financial feature:  CFO to Assets"
+    },
+    {
+      "feature_name": " Cash Flow to Equity",
+      "default_value": 0.314957534562747,
+      "min": 0.2960230581159582,
+      "max": 0.337877261067818,
+      "description": "Numeric financial feature:  Cash Flow to Equity"
+    },
+    {
+      "feature_name": " Current Liability to Current Assets",
+      "default_value": 0.0277054100955588,
+      "min": 0.003744251067533536,
+      "max": 0.11355264362551865,
+      "description": "Numeric financial feature:  Current Liability to Current Assets"
+    },
+    {
+      "feature_name": " Liability-Assets Flag",
+      "default_value": 0.0,
+      "min": 0.0,
+      "max": 1.0,
+      "description": "Numeric financial feature:  Liability-Assets Flag"
+    },
+    {
+      "feature_name": " Net Income to Total Assets",
+      "default_value": 0.810467178670001,
+      "min": 0.6692615151220748,
+      "max": 0.8881957891314627,
+      "description": "Numeric financial feature:  Net Income to Total Assets"
+    },
+    {
+      "feature_name": " Total assets to GNP price",
+      "default_value": 0.0020690445872037,
+      "min": 0.000174114571819048,
+      "max": 0.18335810029949395,
+      "description": "Numeric financial feature:  Total assets to GNP price"
+    },
+    {
+      "feature_name": " No-credit Interval",
+      "default_value": 0.623876118194395,
+      "min": 0.6151899946944873,
+      "max": 0.6312944368310727,
+      "description": "Numeric financial feature:  No-credit Interval"
+    },
+    {
+      "feature_name": " Gross Profit to Sales",
+      "default_value": 0.605936104427341,
+      "min": 0.5804148880505053,
+      "max": 0.6512325511294474,
+      "description": "Numeric financial feature:  Gross Profit to Sales"
+    },
+    {
+      "feature_name": " Net Income to Stockholder's Equity",
+      "default_value": 0.841147886985134,
+      "min": 0.8258099633935988,
+      "max": 0.8462969296908759,
+      "description": "Numeric financial feature:  Net Income to Stockholder's Equity"
+    },
+    {
+      "feature_name": " Liability to Equity",
+      "default_value": 0.278794453050479,
+      "min": 0.27511404797647393,
+      "max": 0.3010106643206391,
+      "description": "Numeric financial feature:  Liability to Equity"
+    },
+    {
+      "feature_name": " Degree of Financial Leverage (DFL)",
+      "default_value": 0.026808753586052,
+      "min": 0.025290698637676978,
+      "max": 0.03687536312030804,
+      "description": "Numeric financial feature:  Degree of Financial Leverage (DFL)"
+    },
+    {
+      "feature_name": " Interest Coverage Ratio (Interest expense to EBIT)",
+      "default_value": 0.565254146067448,
+      "min": 0.5554998855350767,
+      "max": 0.5735221723306758,
+      "description": "Numeric financial feature:  Interest Coverage Ratio (Interest expense to EBIT)"
+    },
+    {
+      "feature_name": " Net Income Flag",
+      "default_value": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "description": "Numeric financial feature:  Net Income Flag"
+    },
+    {
+      "feature_name": " Equity to Liability",
+      "default_value": 0.0337296684230333,
+      "min": 0.013760860057921492,
+      "max": 0.2276355703493382,
+      "description": "Numeric financial feature:  Equity to Liability"
+    }
+  ]
+}

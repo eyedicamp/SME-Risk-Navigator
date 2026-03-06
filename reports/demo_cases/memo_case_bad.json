@@ -1,0 +1,10 @@
+{
+  "one_line_summary": "Placeholder memo for a high-risk case.",
+  "risk_grade": "E",
+  "risk_score_pd": 0.52,
+  "top_risk_drivers": [],
+  "questions_to_ask": [],
+  "documents_to_request": [],
+  "action_suggestions": [],
+  "disclaimer": "Placeholder file. Overwritten by src.explain run."
+}

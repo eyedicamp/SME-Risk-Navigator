@@ -1,0 +1,54 @@
+{
+  "split_sizes": {
+    "train": 4773,
+    "val": 1023,
+    "test": 1023
+  },
+  "main_model_type": "random_forest_fallback",
+  "calibration_method_used": "sigmoid",
+  "calibration_diagnostics": {
+    "isotonic_brier_val": 0.02225296595526372,
+    "sigmoid_brier_val": 0.024266134543246626,
+    "isotonic_unique_train_probs": 65.0,
+    "isotonic_zero_share_train": 0.7163209721349256
+  },
+  "grade_thresholds": {
+    "A": 0.005687961928977916,
+    "B": 0.005969782820611654,
+    "C": 0.0064214430073959,
+    "D": 0.011241204350449811,
+    "E": 1.01
+  },
+  "baseline_logistic": {
+    "auroc": 0.573783287419651,
+    "auprc": 0.04404384525984341,
+    "brier": 0.2040303462648687,
+    "ks": 0.16666666666666663
+  },
+  "xgb_raw": {
+    "auroc": 0.9359657177838996,
+    "auprc": 0.4312434237005625,
+    "brier": 0.04005010469127933,
+    "ks": 0.7717171717171718
+  },
+  "xgb_calibrated": {
+    "auroc": 0.9359657177838996,
+    "auprc": 0.4312434237005625,
+    "brier": 0.02412093807327204,
+    "ks": 0.7717171717171718
+  },
+  "grade_distribution_train": {
+    "A": 955,
+    "B": 1260,
+    "C": 649,
+    "D": 954,
+    "E": 955
+  },
+  "grade_distribution_test": {
+    "A": 222,
+    "B": 248,
+    "C": 134,
+    "D": 221,
+    "E": 198
+  }
+}

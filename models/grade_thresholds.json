@@ -1,0 +1,17 @@
+{
+  "method": "train_calibrated_quantiles",
+  "quantiles": [
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "calibration_method_used": "sigmoid",
+  "thresholds": {
+    "A": 0.005687961928977916,
+    "B": 0.005969782820611654,
+    "C": 0.0064214430073959,
+    "D": 0.011241204350449811,
+    "E": 1.01
+  }
+}
