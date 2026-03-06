@@ -6,6 +6,7 @@ from typing import Any
 
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field, ValidationError
+import requests
 
 from .config import DEFAULT_OPENAI_MODEL
 
@@ -21,6 +22,47 @@ SYSTEM_PROMPT = (
     "If information is insufficient, explicitly ask for more information. "
     "Output valid JSON only."
 )
+
+
+def _resolve_api_base(base_url: str | None) -> str:
+    if not base_url:
+        return "https://api.openai.com/v1"
+    base = base_url.strip().rstrip("/")
+    if base.endswith("/v1"):
+        return base
+    return f"{base}/v1"
+
+
+def _chat_completion_via_requests(
+    api_key: str,
+    base_url: str | None,
+    model: str,
+    messages: list[dict[str, str]],
+    temperature: float,
+) -> str:
+    api_base = _resolve_api_base(base_url)
+    url = f"{api_base}/chat/completions"
+    resp = requests.post(
+        url,
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "model": model,
+            "temperature": temperature,
+            "messages": messages,
+            "response_format": {"type": "json_object"},
+        },
+        timeout=45,
+    )
+    if resp.status_code >= 400:
+        raise RuntimeError(f"HTTP {resp.status_code}: {resp.text[:500]}")
+    payload = resp.json()
+    content = payload.get("choices", [{}])[0].get("message", {}).get("content", "")
+    if not content:
+        raise RuntimeError("Empty content from chat completion response.")
+    return str(content)
 
 
 class DriverReasoning(BaseModel):
@@ -158,15 +200,12 @@ def generate_copilot_memo(
     client_kwargs: dict[str, Any] = {"api_key": api_key}
     if base_url:
         client_kwargs["base_url"] = base_url
+    client: Any | None = None
+    client_init_error = ""
     try:
         client = OpenAI(**client_kwargs)
     except Exception as exc:
-        return get_fallback_memo(
-            pd_score,
-            grade,
-            drivers,
-            f"OpenAI client initialization failed: {exc}",
-        )
+        client_init_error = f"{type(exc).__name__}: {exc}"
 
     schema_hint = {
         "one_line_summary": "str",
@@ -194,20 +233,41 @@ def generate_copilot_memo(
         }
 
         try:
-            response = client.chat.completions.create(
-                model=model,
-                temperature=0.1,
-                messages=[
-                    {"role": "system", "content": SYSTEM_PROMPT},
-                    {"role": "user", "content": json.dumps(user_payload, ensure_ascii=True)},
-                ],
-                response_format={"type": "json_object"},
-            )
-            content = response.choices[0].message.content or ""
+            messages = [
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": json.dumps(user_payload, ensure_ascii=True)},
+            ]
+            content = ""
+            sdk_error = ""
+            if client is not None:
+                try:
+                    response = client.chat.completions.create(
+                        model=model,
+                        temperature=0.1,
+                        messages=messages,
+                        response_format={"type": "json_object"},
+                    )
+                    content = response.choices[0].message.content or ""
+                except Exception as exc:
+                    sdk_error = f"{type(exc).__name__}: {exc}"
+            else:
+                sdk_error = client_init_error or "OpenAI client unavailable"
+
+            if not content:
+                content = _chat_completion_via_requests(
+                    api_key=api_key,
+                    base_url=base_url or None,
+                    model=model,
+                    messages=messages,
+                    temperature=0.1,
+                )
             validated = parse_and_validate_json(content)
             return _model_dump(validated)
         except (ValidationError, json.JSONDecodeError, Exception) as exc:
-            last_error = str(exc)
+            last_error = (
+                f"sdk_init={client_init_error or 'ok'}; "
+                f"error={type(exc).__name__}: {exc}"
+            )
             continue
 
     return get_fallback_memo(pd_score, grade, drivers, last_error)
